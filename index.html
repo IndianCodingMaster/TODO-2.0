@@ -20,7 +20,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <script src="app.js" defer></script>
   </head>
   <body>
     <div class="img-container">
@@ -33,13 +33,18 @@
     <div class="todo-container">
       <h1>T O D O 2.0</h1>
       <div class="input-container">
-        <input class="input" type="text" placeholder="Start typing......" />
+        <input
+          id="todoInput"
+          class="input"
+          type="text"
+          placeholder="Start typing......"
+        />
         <button class="add-btn" onclick="addTask()">Create</button>
       </div>
       <div class="todo-list">
-        <ul class="ul"></ul>
+        <ul class="ul" id="todoList"></ul>
         <div class="todo-footer">
-          <span>0 items left</span>
+          <p><span id="todoCount">0</span> items left</p>
           <div>
             <button class="active">All</button>
             <button>Active</button>
