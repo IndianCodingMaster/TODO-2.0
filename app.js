@@ -33,9 +33,18 @@ function displayTasks() {
             `;
     todoList.appendChild(li);
 
+    const deleteBtn = li.querySelector(".deleteBtn");
+
+    deleteBtn.addEventListener("click", () => {
+      todoList.removeChild(li);
+      saveToLocalStorage();
+      displayTasks();
+    });
+
     const checkbox = li.querySelector(".checkbox");
     const check = li.querySelector(".check");
-    checkbox.addEventListener("change", () => {
+
+    checkbox.addEventListener("click", () => {
       item.completed = !item.completed;
       saveToLocalStorage();
       displayTasks();
